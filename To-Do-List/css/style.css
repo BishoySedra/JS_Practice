@@ -1,0 +1,142 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: skyblue !important;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    position: relative;
+}
+
+button {
+    border-radius: 25px !important;
+    -webkit-border-radius: 25px !important;
+    -moz-border-radius: 25px !important;
+    -ms-border-radius: 25px !important;
+    -o-border-radius: 25px !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #198754;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    background: #198754;
+    color: white;
+    border: 0px;
+    width: 35px;
+    height: 35px;
+    opacity: 0.9;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+#topBtn:hover {
+    background-color: #555;
+}
+
+#PageIcon {
+    position: fixed;
+    left: 4%;
+    top: 7%;
+    font-size: 30px;
+    color: black;
+}
+
+/* End Global Rules */
+
+/* Start Form */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 90vw;
+}
+
+input[type="text"] {
+    font-size: 16px;
+    padding: 10px;
+    width: 40%;
+    margin-right: 25px;
+}
+
+button[type="submit"] {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* @media (max-width:1024px) {
+    i{
+        left: 92%;
+        top: 91%;
+    }
+} */
+
+/* End Form */
+
+/* Start List */
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 10px;
+    background-color: #eee;
+    padding: 20px;
+    transition: all 0.3s ease;
+    width: 75vw;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    word-wrap: break-word;
+}
+
+li span {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    overflow: auto;
+    margin-right: 15px;
+}
+
+
+/* End List */
