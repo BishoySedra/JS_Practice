@@ -7,7 +7,7 @@ const addBtn = document.getElementById("add-btn");
 const updateBtn = document.getElementById("update-btn");
 const searchInput = document.getElementById("searchInput");
 
-let booksContainer;
+let booksContainer = [];
 
 checkLocalStorage(); // called first when the program starts to check if there is past info stored or not
 
