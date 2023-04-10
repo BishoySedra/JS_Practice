@@ -4,8 +4,8 @@
 
 Here are hosting links to take a look at these projects before you start developing them on your own:
 
-| #   | Project Name                | Hosting Link                                                           |
-| --- | --------------------------- | ---------------------------------------------------------------------- |
+| #   | Project Source Code                | Hosting Link                                                           |
+| --- | ---------------------------------- | ---------------------------------------------------------------------- |
 | 1   | [To-Do-List](https://github.com/BishoySedra/To-Do-List) | [Live Demo](https://bishoysedra.github.io/To-Do-List) |
 | 2   | [Random-Quotes](https://github.com/BishoySedra/Random_Quotes) | [Live Demo](https://bishoysedra.github.io/Random_Quotes) |
 | 3   | [Image-Slider](https://github.com/BishoySedra/Image_Slider) | [Live Demo](https://bishoysedra.github.io/Image_Slider) |
