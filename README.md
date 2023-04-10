@@ -11,3 +11,4 @@ Here are hosting links to take a look at these projects before you start develop
 | 3   | Image-Slider                | [Live Demo](https://bishoysedra.github.io/Image_Slider)                |
 | 4   | Hex-Background-Color-Change | [Live Demo](https://bishoysedra.github.io/Hex_Background_Color_Change) |
 | 5   | Counter                     | [Live Demo](https://bishoysedra.github.io/Counter)                     |
+| 6   | CRUD App                    | [Live Demo](https://bishoysedra.github.io/CRUD-App/)                   |
