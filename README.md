@@ -4,7 +4,7 @@
 
 Here are hosting links to take a look at these projects before you start developing them on your own:
 
-| #   | Project Name                | Live Demo                                                              |
+| #   | Project Name                | Hosting Link                                                           |
 | --- | --------------------------- | ---------------------------------------------------------------------- |
 | 1   | To-Do-List                  | [Live Demo](https://bishoysedra.github.io/To-Do-List)                  |
 | 2   | Random-Quotes               | [Live Demo](https://bishoysedra.github.io/Random_Quotes)               |
