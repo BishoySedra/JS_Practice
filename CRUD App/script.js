@@ -3,30 +3,82 @@ const bookPrice = document.getElementById("bookPrice");
 const bookCategory = document.getElementById("bookCategory");
 const bookDescription = document.getElementById("bookDescription");
 const addBtn = document.getElementById("add-btn");
-const insertedBooks = document.getElementById("tableBody");
+const container = document.getElementById("tableBody");
+const updateBtn = document.getElementById("update-btn");
+const searchBox = document.getElementById("searchInput");
 
-let booksContainer = [];
+let books = [];
+let selectedId = null;
+
+checkLocalStorage();
+
+addBtn.addEventListener("click", addBook);
+updateBtn.addEventListener("click", function () {
+    updateBook(selectedId);
+});
+
 
 function updateView() {
-    let htmlContent = ``; // empty string to append all array elements in it
-    for (let i = 0; i < booksContainer.length; i++) {
-        // at each book in the array, append book Info inside the string
-        htmlContent += `
-            <tr>
-                <td>${i}</td> 
-                <td>${booksContainer[i].name}</td>
-                <td>${booksContainer[i].price}</td>
-                <td>${booksContainer[i].category}</td>
-                <td>${booksContainer[i].description}</td>
-                <td> <button class="btn btn-info" onclick = "getBookInfo(${i})">Update</button></td>
-                <td><button class="btn btn-danger" onclick="deleteBook(${i})">Delete</button></td>    
-            </tr>`;
-        // the id of each book is passed inside get Book Info and delete book functions , so when we click on these buttons
-        // those functions will be called and the book id are already passed to it , you can see it through inspect from the browser
+    let htmlContent = ``;
+    for (let i = 0; i < books.length; i++) {
+        htmlContent += `<tr>
+        <td>${i}</td> 
+        <td>${books[i].name}</td>
+        <td>${books[i].price}</td>
+        <td>${books[i].category}</td>
+        <td>${books[i].description}</td>
+        <td> <button class="btn btn-info" onclick = "getBookInfo(${i})">Update</button></td>
+        <td> <button class="btn btn-danger" onclick ="deleteBook(${i})">Delete</button></td>    
+        </tr>`
     }
-    insertedBooks.innerHTML = htmlContent;
+    container.innerHTML = htmlContent;
 }
 
+function addBook() {
+    const book = {
+        name: bookName.value,
+        price: bookPrice.value,
+        category: bookCategory.value,
+        description: bookDescription.value
+    };
+    books.push(book);
+    updateView();
+    localStorage.setItem("books", JSON.stringify(books));
+    clearForm();
+}
+
+function deleteBook(id) {
+    books.splice(id, 1);
+    updateView();
+    localStorage.setItem("books", JSON.stringify(books));
+}
+
+function updateBook(id) {
+    books[id].name = bookName.value;
+    books[id].price = bookPrice.value;
+    books[id].category = bookCategory.value;
+    books[id].description = bookDescription.value;
+    updateView();
+    localStorage.setItem("books", JSON.stringify(books));
+    swapButtons();
+    clearForm();
+    selectedId = null;
+}
+
+function getBookInfo(id) {
+    bookName.value = books[id].name;
+    bookPrice.value = books[id].price;
+    bookCategory.value = books[id].category;
+    bookDescription.value = books[id].description;
+    selectedId = id;
+    swapButtons();
+    // console.log("here");
+}
+
+function swapButtons() {
+    addBtn.classList.toggle("d-none");
+    updateBtn.classList.toggle("d-none");
+}
 
 function clearForm() {
     bookName.value = ``;
@@ -35,26 +87,31 @@ function clearForm() {
     bookDescription.value = ``;
 }
 
-addBtn.addEventListener("click", addBook);
-
-
-function addBook() {
-    const book = {
-        name: bookName.value,
-        price: bookPrice.value,
-        category: bookCategory.value,
-        description: bookDescription.value
+function searchBook() {
+    let htmlContent = ``;
+    for (let i = 0; i < books.length; i++) {
+        const nameAvailable = books[i].name.toLowerCase();
+        const myValue = searchBox.value.toLowerCase();
+        if (nameAvailable.includes(myValue)) {
+            htmlContent += `<tr>
+            <td>${i}</td> 
+            <td>${books[i].name}</td>
+            <td>${books[i].price}</td>
+            <td>${books[i].category}</td>
+            <td>${books[i].description}</td>
+            <td> <button class="btn btn-info" onclick = "getBookInfo(${i})">Update</button></td>
+            <td> <button class="btn btn-danger" onclick ="deleteBook(${i})">Delete</button></td>    
+            </tr>`
+        }
     }
-    booksContainer.push(book);
-    updateView();
-    clearForm();
+    container.innerHTML = htmlContent;
 }
 
-function updateBook(id) {
-
-}
-
-function deleteBook(id) {
-    booksContainer.splice(id, 1);
+function checkLocalStorage() {
+    if (localStorage.getItem("books") === null) {
+        books = [];
+    } else {
+        books = JSON.parse(localStorage.getItem("books"));
+    }
     updateView();
 }

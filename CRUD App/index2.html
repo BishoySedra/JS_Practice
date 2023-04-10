@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="bookshelf.png" type="image/x-icon">
+  <title>CRUD App</title>
+</head>
+
+<body>
+  <div class="container my-5">
+    <label for="bookName" class="font-weight-bold">Book Name : </label>
+    <input required type="text" id="bookName" class="form-control mb-4" />
+
+    <label for="bookPrice" class="font-weight-bold">Book Price : </label>
+    <input required type="number" id="bookPrice" class="form-control mb-4" />
+
+    <label for="bookCategory" class="font-weight-bold">Book Category :
+    </label>
+    <input required type="text" id="bookCategory" class="form-control mb-4" />
+
+    <label for="bookDescription" class="font-weight-bold">Book Description :
+    </label>
+    <input required type="text" id="bookDescription" class="form-control mb-4" />
+
+    <button class="btn btn-success font-weight-bold mb-5" id="add-btn"> Add Book </button>
+    <button class="btn btn-warning font-weight-bold mb-5 d-none" id="update-btn"> Update Book</button>
+
+
+    <input type="text" placeholder="search with book name..." id="searchInput" class="d-block m-auto w-50 form-control"
+      onkeyup="searchBook()" />
+
+    <table class="table text-center mt-5">
+      <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </thead>
+      <tbody id="tableBody">
+
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
