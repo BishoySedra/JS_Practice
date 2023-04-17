@@ -12,3 +12,4 @@ Here are hosting links to take a look at these projects before you start develop
 | 4   | [Hex-Background-Color-Change](https://github.com/BishoySedra/Hex_Background_Color_Change) | [Live Demo](https://bishoysedra.github.io/Hex_Background_Color_Change) |
 | 5   | [Counter](https://github.com/BishoySedra/Counter) | [Live Demo](https://bishoysedra.github.io/Counter) |
 | 6   | [CRUD-App](https://github.com/BishoySedra/CRUD-App) | [Live Demo](https://bishoysedra.github.io/CRUD-App/) |
+| 7   | [Calculator](https://github.com/BishoySedra/Calculator) | [Live Demo](https://bishoysedra.github.io/Calculator/) |
