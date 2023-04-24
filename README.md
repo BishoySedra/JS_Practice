@@ -13,3 +13,4 @@ Here are hosting links to take a look at these projects before you start develop
 | 5   | [Counter](https://github.com/BishoySedra/Counter) | [Live Demo](https://bishoysedra.github.io/Counter) |
 | 6   | [CRUD-App](https://github.com/BishoySedra/CRUD-App) | [Live Demo](https://bishoysedra.github.io/CRUD-App/) |
 | 7   | [Calculator](https://github.com/BishoySedra/Calculator) | [Live Demo](https://bishoysedra.github.io/Calculator/) |
+| 8   | [Drum-Kit](https://github.com/BishoySedra/Drum-Kit) | [Live Demo](https://bishoysedra.github.io/Drum-Kit/) |
