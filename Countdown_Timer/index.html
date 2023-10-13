@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3479/3479946.png" type="image/x-icon">
     </head>
 
 <body>
@@ -25,57 +26,3 @@
 </body>
 
 </html>
-
-<!-- let interval;
-let seconds = 0;
-
-function updateDisplay() {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
-    document.getElementById("countdown").textContent = `${String(
-        minutes
-    ).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`;
-}
-
-function startTimer() {
-    const inputField = document.getElementById("timer-input");
-    seconds = parseInt(inputField.value, 10);
-    if (isNaN(seconds) || seconds <= 0) {
-        alert("Please enter a valid number of seconds.");
-        inputField.value = "";
-        return;
-    }
-
-    inputField.value = "";
-    updateDisplay();
-    document.getElementById("start").disabled = true;
-    document.getElementById("stop").disabled = false;
-    document.getElementById("reset").disabled = false;
-
-    interval = setInterval(function () {
-        seconds--;
-        updateDisplay();
-        if (seconds === 0) {
-            stopTimer();
-        }
-    }, 1000);
-}
-
-function stopTimer() {
-    clearInterval(interval);
-    document.getElementById("start").disabled = false;
-    document.getElementById("stop").disabled = true;
-}
-
-function resetTimer() {
-    clearInterval(interval);
-    document.getElementById("start").disabled = false;
-    document.getElementById("stop").disabled = true;
-    document.getElementById("reset").disabled = true;
-    seconds = 0;
-    updateDisplay();
-}
-
-document.getElementById("start").addEventListener("click", startTimer);
-document.getElementById("stop").addEventListener("click", stopTimer);
-document.getElementById("reset").addEventListener("click", resetTimer);
