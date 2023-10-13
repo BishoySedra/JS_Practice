@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #333; /* Background color for the entire page */
+    color: white;
+}
+
+.container {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.timer {
+    font-size: 2rem;
+    margin: 20px;
+    border: #333;
+}
+
+#timer-input {
+    padding: 11px;
+    border-radius: 20px;
+}
+
+#controls {
+    margin: 20px;
+}
+
+/* Style for buttons */
+button {
+    background-color: #4CAF50; /* Green background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style for Start button */
+#start {
+    background-color: #4CAF50; /* Green background color */
+}
+
+/* Style for Stop button */
+#stop {
+    background-color: #f44336; /* Red background color */
+}
+
+#restart{
+    background-color: #F1C40F; 
+}
+
+/* Style for Reset button */
+#reset {
+    background-color: #3498db; /* Blue background color */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
