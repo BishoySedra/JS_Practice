@@ -196,4 +196,3 @@ function addQuestionData(obj, num) {
 }
 
 getData();
-
